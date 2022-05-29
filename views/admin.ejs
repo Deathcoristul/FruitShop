@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adăugare</title>
+    </head>
+    <body>
+        <h1 id="title">Adăugare</h1>
+        <% if(locals.session.access=="admin") {%> 
+        <form action="/adaugare-produs" method="post">
+            <fieldset id="log">
+                <label for="prodname">Numele Produsului</label>
+                <input type="text" id="prodname" name="prodname"/><br/>
+                <label for="price">Prețul</label>
+                <input type="text" id="price" name="price"/><br/>
+                <input type="submit" id="add" value="Adaugă"/>
+            </fieldset>
+        </form>
+        <% } %>
+    </body>
+</html>

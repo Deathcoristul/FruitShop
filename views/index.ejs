@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pagina Principala</title>
+    </head>
+    <body>
+        <h1 id="title">Bun Venit
+        <% if(locals.session.loggedin) {%> 
+             <%= name%><% } %>!</h1>
+        <nav>
+            <a href="/autentificare">Autentificare</a>
+            <a href="/chestionar">Chestionar</a>
+            <% if(locals.session.access=="admin") {%> 
+                <a href="/admin">Adaugă în BD</a> 
+            <% } %>    
+            <a href="/creare-bd">Creare BD</a>
+            <a href="/inserare-bd">Încărcare BD</a>
+        </nav>
+        <% if( typeof(tabel) != "undefined" && tabel.length != 0) { %>
+        <table id="prod">
+            <tr>
+                <th>ID</th>
+                <th>Nume</th>
+                <th>Pret</th>
+                <%if (locals.session.loggedin) { %>
+                    <th>Butoane</th>
+                <%}%>
+            </tr>
+            <% for(let i=0; i < tabel.length ; i++ ) { %>
+                <tr>
+                    <td><%= tabel[i].id%></td>
+                    <td><%= tabel[i].nume%></td>
+                    <td><%= tabel[i].pret%></td>
+                    <%if (locals.session.loggedin) { %>
+                        <td>
+                            <form action="/adaugare-cos" method="post">
+                                <input type="hidden" name="id" value="<%= tabel[i].id%>" />
+                                <input type="submit" id="add" value="Adauga in cos" />
+                            </form>
+                        </td>
+                    <%}%>
+                </tr>
+            <% } %>
+        </table>
+        <% } %>
+    </body>
+</html>

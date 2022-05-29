@@ -1,0 +1,119 @@
+body{
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1600px 750px;
+}
+aside>form>p#logged{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color:rgb(195, 255, 0);
+}
+button#lo{
+    background-color: rgb(255, 0, 0);
+    font-size: 30px;
+    border-radius: 10px;
+    color:rgb(255, 106, 0);
+}
+footer{
+    text-align:center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(255, 136, 0);
+    font-size: 20px;
+}
+fieldset{
+    border-color:lime;
+    border-style: solid;
+    border-radius: 10px;
+    background-color:rgba(0, 255, 68, 0.584);
+}
+fieldset#log{
+    border-color:rgb(0, 123, 255);
+    border-style: solid;
+    border-radius: 10px;
+    background-color:rgba(0, 170, 255, 0.623);
+}
+form{
+    text-align:center;
+}
+#submit{
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 162, 0);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10px;
+    font-size: 30px;
+}
+#err{
+    color:#ff0000;
+}
+::selection{
+    background:rgb(255, 119, 0);
+    color:rgb(255, 255, 97)
+}
+label{
+    font-size:20px;
+}
+aside{
+    float: right;
+    padding-right: 20px;
+    border:1px solid #00ff91;
+    border-radius: 20px;
+    background-color: #ffc400;
+}
+table#prod{
+    background-color: yellow;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto; /*centrare tabel*/
+    border: 3px solid;
+}
+
+table#prod tr td {
+    border: 1px solid;
+}
+table#prod tr th {
+    border: 2px solid;
+    border-color: #ff0000;
+}
+#add{
+    color:rgb(0, 0, 0);
+    background-color: yellow;
+}
+#title{
+    color: rgb(255, 170, 0);
+    text-shadow: 3px 3px #ff0000;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+    font-style: oblique;
+}
+a:active{
+    color:lime;
+}
+a:visited{
+    color: rgb(255, 0, 0);
+}
+#res{
+    color: rgb(255, 170, 0);
+    text-shadow: 3px 3px #ff0000;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+}
+nav{
+    text-align: center;
+    padding:5px;
+    font-size:45px;
+    background-color: rgba(255, 166, 0, 0.744);
+}
+ul.cos{
+    list-style-type: square;
+    background: #fff700af;
+    padding: 20px;
+    margin:0 auto;/*aliniere la centru*/
+}
+ul.cos>li{
+    text-align : center;
+    font-family : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

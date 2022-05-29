@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fructe</title>
+        <link rel="stylesheet" type="text/css" href="/stil.css"/>
+    </head>
+    <body>
+        <%if (locals.session.loggedin) { %>
+            <aside>
+                <form action="/logout">
+                    <p id="logged">Logat ca <%= locals.session.username%></p>
+                    <a href="/vizualizare-cos">Vezi Coșul</a>
+                    <button type="submit" id="lo">Log Out</button>
+                </form>
+            </aside>
+        <%}%>      
+        <%- body %>
+        <footer>&copy Iliescu Ștefan-Adrian, grupa 1310A, 2022</footer>
+    </body>
+</html>

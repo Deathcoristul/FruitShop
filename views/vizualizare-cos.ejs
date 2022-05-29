@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="title">Coșul tău</h1>
+        <nav>
+            <a href="/">Pagina Principală</a>
+            <a href="/autentificare">Autentificare</a>
+            <a href="/chestionar">Chestionar</a>
+        </nav>
+        <% if(locals.session.loggedin) { %>
+            <% let sum = 0 ; %>
+            <ul class="cos">
+            <% for(let i=0; i < list.length; i++) { %>
+                <% for(let j=0; j < locals.session.addIDs.length; j++) { %>
+                    <% if(list[i].id == locals.session.addIDs[j]) { %>
+                      <li> <%= list[i].nume %> | <%= list[i].pret %> lei </li>  
+                    <% } %>
+                <% } %>
+            <% } %>
+            </ul>
+        <% } %>
+    </body>
+</html>

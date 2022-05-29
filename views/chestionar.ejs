@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 id="title" style="text-align: center;">Chestionar</h1>
+        <nav>
+            <a href="/">Pagina Principală</a>
+            <a href="/autentificare">Autentificare</a>
+            <a href="/creare-bd">Creare BD</a>
+            <a href="/inserare-bd">Încărcare BD</a>
+        </nav>
+        <% if(intrebari.length!=0) { %>
+            <fieldset>
+            <form action="/rezultat-chestionar" method="post">
+                <% for(let i=0; i < intrebari.length ; i++ ) {%>
+                    <label for="question <%= i+1 %>"><%= intrebari[i].intrebare %></label><br/>
+                    <% for(let j=0; j < intrebari[i].variante.length ; j++ ) {%>
+                        <label for="ans<%= i+1 %><%= j+1 %>"><%= intrebari[i].variante[j] %></label>
+                        <input type="radio" id="ans<%= i+1 %><%= j+1 %>" name="question <%= i+1 %>" value="<%= intrebari[i].variante[j] %>"/><br/>
+                    <% } %>
+                    <br/>
+                <% } %>
+                <input type="submit" id="submit" value="Validează">
+            </form>
+            </fieldset>
+        <% } %>
+    </body>
+</html>
